@@ -286,9 +286,6 @@ static nvme_ctrl_t create_discover_ctrl(nvme_root_t r, nvme_host_t h,
 		return NULL;
 	}
 
-	if (!strcmp(id.subnqn, NVME_DISC_SUBSYS_NAME))
-		return c;
-
 	/*
 	 * The subsysnqn is not the well-known name. Prefer the unique
 	 * subsysnqn over the well-known one.
